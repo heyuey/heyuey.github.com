@@ -15,6 +15,7 @@ function Player(songList,$audio,$currentTime,$totalTime,$controlBarInner,$contro
 	var tempCurrentMin = "";
 	var tempCurrentSec = "";
 	this.play = function(index){
+		this.$audio[0].pause();
 		clearInterval(this.$audio.timer1);
 		clearInterval(this.$audio.timer2);
 		
