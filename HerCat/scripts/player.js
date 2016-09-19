@@ -125,7 +125,7 @@ function Player(songList,$audio,$currentTime,$totalTime,$controlBarInner,$contro
 
 					this.$currentTime.text(tempCurrentMin+" : "+tempCurrentSec+" ");
 					this.$controlBarOuter.css({"width":(parseFloat(this.$controlBarInner.css("width"))*currentTime/totalTime)});
-					currentTime++;
+					currentTime = this.$audio[0].currentTime;
 				}else{ 
 					this.$controlBarOuter.css({"width":parseFloat(this.$controlBarInner.css("width"))});
 					this.$currentTime.text(" "+tempTotalMin+" : "+tempTotalSec);
@@ -158,7 +158,7 @@ function Player(songList,$audio,$currentTime,$totalTime,$controlBarInner,$contro
 
 					this.$currentTime.text(tempCurrentMin+" : "+tempCurrentSec+" ");
 					this.$controlBarOuter.css({"width":(parseFloat(this.$controlBarInner.css("width"))*currentTime/totalTime)});
-					currentTime++;
+					currentTime = this.$audio[0].currentTime;
 				}else{ 
 					this.$controlBarOuter.css({"width":parseFloat(this.$controlBarInner.css("width"))});
 					this.$currentTime.text(" "+tempTotalMin+" : "+tempTotalSec);
