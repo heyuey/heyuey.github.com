@@ -1,0 +1,245 @@
+*{ 
+		padding: 0;
+		margin: 0;
+		border: 0;
+ }
+html,body{ 
+		width: 100%;
+		height: 100%;
+		min-width: 1024px;
+		background-color: #F3F3F1;
+		overflow: hidden;
+ }
+
+.main-wrapper{ 
+		width: 100%;
+		height: 100%;
+		position: relative;
+		background-image: url(images/main.jpg);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		transition: all 2s;
+ }
+ #stageOuter{ 
+		perspective: 1000px;
+		perspective-origin: 50% 50%;
+		width: 240px;
+		height: 240px;
+		position: absolute;
+		top: 140px;
+		left: 50px;
+		transform-style: preserve-3d;
+		
+ }
+
+#stage{ 
+		perspective-origin: 50% 50%;
+		width: 240px;
+		height: 240px;
+		position: absolute;
+		transform-style: preserve-3d;
+		transition: all 2s;
+ }
+#cube{ 
+		position: relative;
+		width: 240px;
+		height: 240px;
+		margin: auto;
+		transform-style: preserve-3d;
+		transition: all 2s;	  
+ }
+#cube>div{ 
+		width: 240px;
+		height: 240px;
+		transform-style: preserve-3d;
+		color: black;
+		text-align: center;
+		background-color: transparent;
+		position: absolute;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		transition: all 2s;
+		cursor: pointer;
+ }
+
+#cubeLeft{ 
+		transform: rotateY(-90deg) translateZ(120px);
+		background-image: url(images/004.jpg);
+ }
+#cubeRight{ 
+	 	transform: rotateY(90deg) translateZ(120px);
+	 	background-image: url(images/002.jpg);
+ }
+#cubeFront{ 
+	 	transform: translateZ(120px);
+	 	background-image: url(images/001.jpg);
+ }
+#cubeBack{ 
+		transform: rotateY(180deg) translateZ(120px);
+		background-image: url(images/003.jpg);
+ }
+#cubeTop{ 
+	 	transform: rotateX(90deg) translateZ(120px);
+	 	background-image: url(images/005.jpg);
+ }
+#cubeBottom{ 
+	 	transform: rotateX(-90deg) translateZ(120px);
+	 	background-image: url(images/006.jpg);
+ }
+#cube .cubeInside{
+ 		opacity: 0;
+ }
+#cube .cubeInside:nth-child(7){ 
+		left: -40px;
+		background-image: url(images/007.jpg);
+ }
+#cube .cubeInside:nth-child(8){ 
+		left: 160px;
+		background-image: url(images/008.jpg);
+ }
+#cube .cubeInside:nth-child(9){ 
+		left: 360px;
+		background-image: url(images/009.jpg);
+ }
+
+ .words-wrapper{ 
+ 		perspective: 500px;
+		perspective-origin: 50% 50%;
+		width: 140px;
+		height: 140px;
+		position: absolute;
+		top: 80px;
+		right: 80px;
+		transform-style: preserve-3d;
+  }
+ #wordsStage{ 
+ 		width: 100%;
+		height: 100%;
+		transform-style: preserve-3d;
+
+  }
+#wordsCube{ 
+		position: relative;
+		width: 100%;
+		height: 100%;
+		margin: auto;
+		transform-style: preserve-3d;
+		transition: all 2s;	  
+ }
+#wordsCube>div{ 
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		transform-style: preserve-3d;
+		color: black;
+		text-align: center;
+		padding-top: 50px;
+		background-color: transparent;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		transition: all 2s;
+		cursor: default;
+		font: 28px Helvetica Serif ;
+		font-weight: bold;
+
+}
+#wordsCubeLeft{ 
+		transform: rotateY(-90deg) translateZ(70px);
+		opacity: 0;
+		
+ }
+#wordsCubeRight{ 
+	 	transform: rotateY(90deg) translateZ(70px);
+	 	opacity: 0;
+	 	
+ }
+#wordsCubeFront{ 
+	 	transform: translateZ(70px);
+	 	
+ }
+#wordsCubeBack{ 
+		transform: rotateY(180deg) translateZ(70px);
+		opacity: 0;
+		
+ }
+#wordsCubeTop{ 
+	 	transform: rotateX(90deg) translateZ(70px);
+	 	opacity: 0;
+	 	
+ }
+#wordsCubeBottom{ 
+	 	transform: rotateX(-90deg) translateZ(70px);
+	 	opacity: 0;
+	 	
+ }
+
+#wordsExplain{ 
+		position: absolute;
+		top: 160px;
+		right: -40px;
+		width: 220px;
+		text-align: left;
+		font: 18px Tahoma;
+		font-weight: bold;
+		text-indent: 36px;
+		line-height: 20px;
+ }
+
+ #audioPlayer{ 
+ 		width: 12%;
+ 		height: 16%;
+ 		position: fixed;
+ 		right: 30px;
+ 		bottom: 36px;
+ 		background-image: url(images/audio.jpg);
+ 		background-repeat: no-repeat;
+ 		background-size: contain;
+ 		background-position: center;
+ 		border-radius: 6px;
+  }
+ #audioOuter{ 
+ 		width: 80%;
+ 		height: 80%;
+ 		margin: 10% auto;
+ 		opacity: .4;
+ 		background-image: url(images/play.svg);
+ 		background-repeat: no-repeat;
+ 		background-size: 60% 60%;
+ 		background-position: center;
+ 		border-radius: 2px;
+
+  }
+ #audioOuter:hover{ 
+ 		opacity: 1;
+  }
+ #menu{ 
+ 		position: fixed;
+ 		width: 160px;
+ 		height: 100px;
+ 		right: 50px;
+ 		top: 10px;
+ 		color: black;
+ 		transition: all .3s;
+ 		
+  }
+
+ #menu>a{ 
+ 		width: 25px;
+ 		height: 50px;
+ 		position: absolute;
+ 		right: 0;
+ 		top: 0;
+ 		line-height: 25px;
+ 		font: 25px arial sans-serif;
+ 		font-weight: bold;
+ 		transition: all 2s;
+ 		opacity: 0;
+ 		text-decoration: none;
+ 		color: #6A1B9A;
+  }
+#menu>a:nth-child(4){ 
+		opacity: 1;
+}
