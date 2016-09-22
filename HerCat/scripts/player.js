@@ -26,6 +26,7 @@ function Player(songList,$audio,$currentTime,$totalTime,$controlBarInner,$contro
 		this.$audio.timer1 = setInterval(function(){ 
 				if(!totalTime>0||isNaN(totalTime)){
 					totalTime = this.$audio[0].duration;
+					this.$totalTime.text("loading...");
 					if(totalTime>0){ 
 						if(Math.floor(totalTime/60)<=9){ 
 							tempTotalMin = "0"+Math.floor(totalTime/60);
