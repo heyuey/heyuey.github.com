@@ -25,10 +25,10 @@ var outer5Timer = "";
 var outer6Timer = "";
 var outer7Timer = "";
 
-
-initCenter();
-initMiddle();
-
+window.onload = function(){ 
+		initCenter();
+		initMiddle();
+}
 
 
 
