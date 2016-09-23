@@ -13,4 +13,5 @@ function initCover(){
 		$cover.eq(0).on({"click":function(){window.open("HerCat/HerCat.html")}});
 		$cover.eq(1).on({"click":function(){window.open("SteinsGate/SteinsGate.html")}});
 		$cover.eq(2).on({"click":function(){window.open("Crossing/Crossing.html")}});
+		$cover.eq(3).on({"click":function(){window.open("Answer/Answer.html")}});
 }

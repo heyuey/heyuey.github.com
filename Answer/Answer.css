@@ -1,0 +1,105 @@
+*{ 
+		padding: 0;
+		margin: 0;
+		border: 0;
+ }
+body,html{
+		width: 100%;
+		height: 100%; 
+		background: url(images/background.jpg);
+ }
+.wrapper{ 
+		position: relative;
+		width: 100%;
+		height: 100%;
+		perspective: 400px;
+ }
+#center{ 
+		width: 10%;
+		height: 10%;
+		position: absolute;
+		left: 45%;
+		top: 45%;
+		color: white;
+		font: 24px arial sans-serif;
+		text-align: center;
+		cursor: default;
+ }
+.middle{ 
+		width: 10%;
+		height: 10%;
+		position: absolute;
+		color: white;
+		font: 18px arial sans-serif;
+		text-align: center;	
+		z-index: 9;
+		background: url(images/background.jpg) ;
+		display: none;
+		text-decoration: none;
+ }
+
+#showMiddle{ 
+		position: absolute;
+		font: 20px arial sans-serif;
+		line-height: 30px;
+		color: white;
+		background-color: white;
+		background: url(images/background.jpg) ;
+		display: none;
+		text-align: center;
+		z-index: 999;
+ }
+.outer{ 
+		width: 32%;
+		height: 32%;
+		position: absolute;
+		opacity: .6;
+		display: none;
+		background-repeat: no-repeat;
+		transform-style: preserve-3d;
+
+ }
+.outer:nth-child(10){ 
+		background-image: url(images/001.jpg) ;
+		background-position: 100% 100%;
+		transition: background-position 16s ease-in-out;
+
+ }
+.outer:nth-child(11){ 
+		background-image: url(images/002.jpg) ;
+		background-position: 100% 0%;
+		background-size: 100%;
+		transition: background-position 16s ease-in-out;
+
+ }
+.outer:nth-child(12){ 
+		background-image: url(images/003.jpg) ;
+		background-position: 0% 100%;
+		transition: background-position 16s ease-in-out;
+ }
+.outer:nth-child(13){ 
+		background-image: url(images/004.jpg) ;
+		background-position: 0% 50%;
+		transition: background-position 16s ease-in-out;
+
+ }
+.outer:nth-child(14){ 
+		background-image: url(images/005.jpg) ;
+		transition: background-position 16s ease-in-out;
+ }
+.outer:nth-child(15){ 
+		background-image: url(images/006.jpg) ;
+		background-size: 100%;
+		background-position: 100% 0%;
+		transition: background-position 16s ease-in-out;
+ }
+.outer:nth-child(16){ 
+		background-image: url(images/007.jpg) ;
+		background-position: 100% 0%;
+		transition: background-position 16s ease-in-out;
+ }
+.outer:nth-child(17){ 
+		background-image: url(images/008.jpg) ;
+		background-position: 100% 50%;
+		transition: background-position 16s ease-in-out;
+ }

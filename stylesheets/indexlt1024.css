@@ -55,3 +55,6 @@ html ,body{
 .wrapper .practices:nth-child(4) .cover{ 
 		background-image: url(images/practices03.jpg);
  }
+.wrapper .practices:nth-child(5) .cover{ 
+		background-image: url(images/practices04.jpg);
+ }
