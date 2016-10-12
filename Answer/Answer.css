@@ -103,3 +103,27 @@ body,html{
 		background-position: 100% 50%;
 		transition: background-position 16s ease-in-out;
  }
+#loadingDiv{ 
+		position:fixed;
+		left:0;
+		top:0;
+		height:100%;
+		width:100%;
+		background:#424242;
+		color:#F5F5F5;
+		font:50px "Microsoft Yahei",arial,sans-serif;
+		text-align:center;
+ }
+#loadingWords{ 
+		position: absolute;
+		bottom: 150px;
+		width: 100%;
+ }
+#loadingWords .words{ 
+		display: inline-block;
+		margin-left: -5px;
+ }
+#loadingWords .current{ 
+		opacity: 1;
+		
+ }
