@@ -43,7 +43,7 @@ var cubeTimer = "";
 var wordTimer = "";
 var menuTimer = "";
 
-
+$("body").append("<div id=\"loadingDiv\" style=\"position:fixed;left:0;top:0;height:100%;width:100%;background:grey\">loading...</div>");
 
 window.onload = function(){ 
 		initCubeClick();
@@ -51,7 +51,8 @@ window.onload = function(){
 		initWords();
 		initAudio();
 		initMenu();
-};
+		$("#loadingDiv").remove();
+}
 
 var cubeAnimate = function(){ 
 		return function(){ 
