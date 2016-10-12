@@ -70,7 +70,7 @@ function initLoading(){
 			 	}
 			 }
 			
-		},100);
+		},100); 
 }
 
 window.onload = function(){ 
