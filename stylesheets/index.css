@@ -38,6 +38,9 @@ html ,body{
 		text-decoration: none;
 		color: #FFF;
  }
+#list-pra .practise a:visited{ 
+		color: #6A1B9A;
+ }
 #list-pra .practise a:hover{ 
 		color: #00a1d6;
  }
