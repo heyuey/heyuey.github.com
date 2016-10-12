@@ -79,7 +79,7 @@ window.onload = function(){
 		initWords();
 		initAudio();
 		initMenu();
-		//$loadingDiv.remove();
+		$loadingDiv.remove();
 }
 
 var cubeAnimate = function(){ 
