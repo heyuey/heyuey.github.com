@@ -43,15 +43,15 @@ var cubeTimer = "";
 var wordTimer = "";
 var menuTimer = "";
 
-$("body").append("<div id=\"loadingDiv\" style=\"position:fixed;left:0;top:0;height:100%;width:100%;background:grey\">loading...</div>");
-
+$("body").append("<div id=\"loadingDiv\" style=\"position:fixed;left:0;top:0;height:100%;width:100%;background:grey;color:#FFF;font:50px arial,sans-serif;text-align:center;\"><div id=\"loadingWords\" style=\"margin-bottom:100px;\">loading...</div></div>");
+var $loadingDiv = $("#loadingDiv");
 window.onload = function(){ 
 		initCubeClick();
 		cubeTimer = setInterval(cubeAnimate(),3000);
 		initWords();
 		initAudio();
 		initMenu();
-		$("#loadingDiv").remove();
+		$loadingDiv.remove();
 }
 
 var cubeAnimate = function(){ 
