@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Memo</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/Memo.css">
+	<script type="text/javascript" src="javascripts/jquery-3.1.0.min.js"></script>
+</head>
+<body>
+	<header class="header"> 
+		<div class="title">Memo</div>
+		<div class="fulldate"><div class="year"></div><div class="month"></div><div class="date"></div></div>
+	</header>
+	<div class="wrapper"> 
+		<div class="wrapper-cal"> 
+			<div class="cal"> 
+				<div class="line-ym">
+					<div class="year-minus icon"><</div><div class="year"></div><div class="year-plus icon">></div> 
+					<div class="month-plus icon">></div><div class="month"></div><div class="month-minus icon"><</div> 
+				</div>
+				<div class="line-weekday"> 
+					<div class="weekday">Sun</div>
+					<div class="weekday">Mon</div>
+					<div class="weekday">Tue</div>
+					<div class="weekday">Wed</div>
+					<div class="weekday">Thu</div>
+					<div class="weekday">Fri</div>
+					<div class="weekday">Sat</div>
+				</div>
+				<div class="line-date"> 
+
+				</div>
+			</div>
+			<div id="btn-all">所有备忘</div>
+		</div>
+		<div class="wrapper-memo"> 
+			<input type="text" name="input-memo" class="input-memo" placeholder="添加备忘" />
+			<div class="enter">enter</div>
+			<ul class="ul-memo"> 
+				
+			</ul>
+		</div>
+	</div>
+	<div id="memo-all">
+		<div id="btn-all-close">关闭</div>
+		<ul class="ul-memo"> 
+
+		</ul>
+	</div>
+
+	<script type="text/javascript" src="javascripts/Memo.js"></script>
+</body>
+</html>

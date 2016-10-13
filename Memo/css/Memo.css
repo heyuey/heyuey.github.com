@@ -1,0 +1,337 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i,dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, section, summary,
+time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+		display: block;
+}
+body {
+		line-height: 1;
+}
+ol, ul {
+		list-style: none;
+}
+blockquote, q {
+		quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+		content: '';
+		content: none;
+}
+html,body{ 
+		font-family: "Microsoft YaHei", arial;
+		width: 100%;
+		min-width: 980px;
+		height: 100%;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+		-moz-user-select: none;
+		user-select: none;
+		background-color: #F0F0F0;
+		overflow: hidden;
+ }
+.header{ 
+		width: 100%;
+		height: 50px;
+		background-color: #00a1d6;
+		position: fixed;
+		top: 0;
+		left: 0;
+		line-height: 50px;
+		font-size: 30px;
+		color:  #FFF; 
+		z-index: 999;
+ }
+.header .title{	
+		position: absolute;
+		left: 50px;
+ }
+.header .fulldate{ 
+		line-height: 60px;
+		font-size: 20px;
+		color: #FFF;
+		position: absolute;
+		left: 30%;
+ }
+.header .fulldate>div{ 
+		display: inline-block;
+		padding-right: 10px;
+ }
+.wrapper{ 
+		width: 100%;
+		min-width: 980px;
+		height: 100%;
+		position: absolute;
+		margin-top: 50px;
+		position: relative;
+ }
+/*cal*/
+.wrapper .wrapper-cal{ 
+		width: 30%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+ }
+.wrapper .wrapper-cal .cal{ 
+		width: 80%;
+		margin: 10px auto;
+		text-align: center;
+		overflow: hidden;
+ }
+.wrapper .wrapper-cal .cal .line-ym{ 
+		line-height: 30px;
+		font-size: 26px;
+ }
+.wrapper .wrapper-cal .cal .line-ym>div{ 
+		cursor: pointer;
+		padding: 0 8px;
+ }
+.wrapper .wrapper-cal .cal .line-ym .icon:hover{ 
+		color: #00a1d6;
+ }
+.wrapper .wrapper-cal .cal .line-ym .year-minus{ 
+		float: left;
+ }
+.wrapper .wrapper-cal .cal .line-ym .year{ 
+		float: left;
+ }
+.wrapper .wrapper-cal .cal .line-ym .year-plus{ 
+		float: left;
+ }
+.wrapper .wrapper-cal .cal .line-ym .month-minus{ 
+		float: right;
+ }
+.wrapper .wrapper-cal .cal .line-ym .month{ 
+		float: right;
+ }
+.wrapper .wrapper-cal .cal .line-ym .month-plus{ 
+		float: right;
+ }
+.wrapper .wrapper-cal .cal .line-weekday{ 
+		line-height: 28px;
+		height: 28px;
+		font-size: 20px;
+		color: #616161;
+		border-bottom: 1px solid #000;
+		clear: both;
+ }
+.wrapper .wrapper-cal .cal .line-weekday .weekday{ 
+		width: 14.285%;
+		float: left;
+ }
+.wrapper .wrapper-cal .cal .line-date{ 
+		width: 100%;
+		clear: both;
+ }
+.wrapper .wrapper-cal .cal .line-date .date{ 
+		width: 14.285%;
+		float: left;
+		font-size: 20px;
+		line-height: 40px;
+		cursor: pointer;
+ }
+.wrapper .wrapper-cal .cal .line-date .date:hover{ 
+		color: #00a1d6;
+ }
+.wrapper .wrapper-cal .cal .line-date .today{ 
+		color: #E65100;
+ }
+.wrapper .wrapper-cal .cal .line-date .selected{ 
+		color: #00a1d6;
+ }
+
+/*memo*/
+.wrapper .wrapper-memo{ 
+		width: 70%;
+		height: 100%;
+		position: absolute;
+		left: 30%;
+		top: 0;
+		overflow: hidden;
+ }
+
+.wrapper .wrapper-memo .input-memo{ 
+		width: 80%;
+		height: 40px;
+		line-height: 24px;
+		font-size: 14px;
+		padding-left: 10px;
+		padding-right: 70px;
+		margin-top: 20px;
+		background-color: transparent;
+		outline: none;
+		border: 1px solid #E0E0E0;
+		border-radius: 4px;
+ }
+.wrapper .wrapper-memo .enter{
+		width: 50px; 
+		height: 24px;
+		line-height: 24px;
+		margin-left: -65px;
+		color: #BDBDBD;
+		border-left: 1px dashed #BDBDBD;
+		display: inline-block;
+		text-align: center;
+		cursor: pointer;
+ }
+.wrapper .wrapper-memo .enter:hover{ 
+		color: #000;
+ }
+.wrapper .wrapper-memo .ul-memo,#memo-all .ul-memo{ 
+		width: 100%;
+		height: 70%;
+		margin-top: 30px;
+		overflow-y: auto;
+ }
+.wrapper .wrapper-memo .ul-memo .li-memo,#memo-all .ul-memo .li-memo{ 
+		width: 80%;			
+		padding-right: 90px;
+		border-bottom: 1px solid #E0E0E0;		
+		position: relative;
+ }
+.wrapper .wrapper-memo .ul-memo .li-memo .memo, #memo-all .ul-memo .memo{ 
+		height: 40px;
+		line-height: 40px;
+		font-size: 14px;
+		overflow: hidden;
+		cursor: pointer;
+		-webkit-user-select: auto;
+		-ms-user-select: auto;
+		-moz-user-select: auto;
+		user-select: auto;
+		border-left: 5px solid #E0E0E0;
+		padding-left: 10px;
+		transition: height 0.2s ease-out;
+ }
+.wrapper .wrapper-memo .ul-memo .li-memo .selected, #memo-all .ul-memo .selected{ 
+		height: 300px;
+		font-size: 16px;
+		line-height: 30px;
+		overflow: auto;
+		cursor: default;
+		border-left: 5px solid rgba(0,0,0,0.6);
+		border-bottom: 1px solid rgba(0,0,0,0.6);
+		text-shadow: 1px 1px 1px #FFF;
+ }
+.wrapper .wrapper-memo .ul-memo .li-memo .mini, #memo-all .ul-memo .mini{ 
+		width: 20px;
+		height: 20px;
+		margin-left: 20px;
+		position: absolute;
+		top: 10px;
+		right: 60px;
+		background-image: url(../images/mini.svg);
+		background-size: contain;
+ }
+.wrapper .wrapper-memo .ul-memo .li-memo .mini:hover,#memo-all .ul-memo .mini:hover{ 
+		background-image: url(../images/minihover.svg);
+ }
+.wrapper .wrapper-memo .ul-memo .li-memo .up,#memo-all .ul-memo .up{ 
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		top: 10px;
+		right: 40px;
+		background-image: url(../images/arrow.svg);
+		transform: rotate(180deg);
+		background-size: contain;
+ }
+.wrapper .wrapper-memo .ul-memo .li-memo .up:hover,#memo-all .ul-memo .up:hover{ 
+		background-image: url(../images/arrowhover.svg);
+ }
+.wrapper .wrapper-memo .ul-memo .li-memo .down,#memo-all .ul-memo .down{ 
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		top: 10px;
+		right: 20px;
+		background-image: url(../images/arrow.svg);
+		background-size: contain;
+ }
+.wrapper .wrapper-memo .ul-memo .li-memo .down:hover,#memo-all .ul-memo .down:hover{ 
+		background-image: url(../images/arrowhover.svg);
+ }
+.wrapper .wrapper-memo .ul-memo .li-memo .del,#memo-all .ul-memo .del{ 
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		top: 10px;
+		right: 0px;
+		background-image: url(../images/del.svg);
+		background-size: contain;
+ }
+.wrapper .wrapper-memo .ul-memo .li-memo .del:hover,#memo-all .ul-memo .del:hover{ 
+		background-image: url(../images/delhover.svg);
+ }
+
+#memo-all{ 
+		position: fixed;
+		width: 70%;
+		height: 100%;
+		top: 50px;
+		left: 30%;
+		background-color: #FFF;
+		display: none;
+ }
+
+#memo-all .ul-memo .mini{ 
+		right: 20px;
+ }
+
+#btn-all{ 
+		clear: both;
+		font-size: 20px;
+		line-height: 30px;
+		position: absolute;
+		bottom: 100px;
+		right: 0;
+		padding: 0 10px;
+		color: #FFF;
+		background-color: #00a1d6;
+		text-align: center;
+		cursor: pointer;
+		transition: all 0.2s ease-out;
+
+ }
+#btn-all:hover{ 
+		color: #00a1d6;
+		background-color: #FFF;
+ }
+#btn-all-close{ 
+		clear: both;
+		font-size: 20px;
+		line-height: 30px;
+		position: absolute;
+		bottom: 100px;
+		left: 0;
+		padding: 0 10px;
+		color: #FFF;
+		background-color: #00a1d6;
+		text-align: center;
+		cursor: pointer;
+		transition: all 0.2s ease-out;
+
+ }
+#btn-all-close:hover{ 
+		color: #00a1d6;
+		background-color: #FFF;
+ }
