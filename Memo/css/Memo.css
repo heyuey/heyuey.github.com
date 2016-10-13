@@ -93,7 +93,7 @@ html,body{
  }
 .wrapper .wrapper-cal .cal{ 
 		width: 80%;
-		margin: 10px auto;
+		margin: 50px auto;
 		text-align: center;
 		overflow: hidden;
  }
@@ -176,7 +176,7 @@ html,body{
 		font-size: 14px;
 		padding-left: 10px;
 		padding-right: 70px;
-		margin-top: 20px;
+		margin-top: 40px;
 		background-color: transparent;
 		outline: none;
 		border: 1px solid #E0E0E0;
@@ -302,7 +302,7 @@ html,body{
 		font-size: 20px;
 		line-height: 30px;
 		position: absolute;
-		bottom: 100px;
+		bottom: 140px;
 		right: 0;
 		padding: 0 10px;
 		color: #FFF;
@@ -321,7 +321,7 @@ html,body{
 		font-size: 20px;
 		line-height: 30px;
 		position: absolute;
-		bottom: 100px;
+		bottom: 140px;
 		left: 0;
 		padding: 0 10px;
 		color: #FFF;
