@@ -6,13 +6,13 @@
 html ,body{ 
 		width: 100%;
 		height: 100%;
-		overflow-x: hidden;
 		font: 20px "Microsoft Yahei",arial,sans-serif;
  }
 .wrapper{ 
 		width: 100%;
 		height: 100%;
 		background-color: rgba(0,0,0,0.8);
+		background-image: url(images/pattern01.jpg);
 		position: relative;
  }
 #list-pra{ 
@@ -26,9 +26,12 @@ html ,body{
  }
 #list-pra .practise .hints{
 		margin-left: 100px;
-		color: #FFF; 
+		color: #CCC; 
 		opacity: 0;
 		transition: opacity 0.3s ease-out;
+ }
+#list-pra .practise .contact{ 
+		display: inline-block;
  }
 #list-pra .practise:hover .hints{ 
 		opacity: 1;
@@ -40,4 +43,29 @@ html ,body{
  }
 #list-pra .practise a:hover{ 
 		color: #00a1d6;
+ }
+@media screen and (max-width: 767px){ 
+#list-pra{
+		position: absolute; 
+		top: 10px;
+		left: 0px;
+		width: 100%;
+ }
+#list-pra .practise{ 
+		margin-top: 20px;
+		width: 90%;
+		margin-left: 5%;
+		border-bottom: 1px solid rgba(255,255,255,0.4);
+ }
+#list-pra .practise .hints{
+		margin-left: 50px;
+		color: #CCC; 
+		display: block;
+		opacity: 1;
+ }
+#list-pra .practise a{ 		
+		color: #0277BD;
+ }
+
+
  }
