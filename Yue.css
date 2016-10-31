@@ -1,0 +1,350 @@
+*{ 
+	padding: 0;
+	margin: 0;
+	border: 0;
+ }
+html,body{
+	width: 100%;
+	height: 100%;
+	background-color: #071B26;
+	font-family: "Microsoft YaHei",arial,sans-serif;
+ }
+
+@media screen and (min-width: 993px){
+.wrapper{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: #071B26;
+	overflow-x: hidden;
+ }
+.yue-inner{ 
+	display: none;
+ } 
+.yue{ 
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+	right: 50px;
+	top: 30%;
+	background-color: #D2C4A7;
+	animation: swing 6s linear infinite;
+	transform-origin: 75% top;
+	cursor: pointer;
+	transition: all .6s ease-in-out;
+	z-index: 999;
+ }
+.yue:before{ 
+	content: "Yue";
+	display: inline-block;
+	position: absolute;
+	left: 30%;
+	top: 50%;
+	margin: -25px 0 0 0;
+	width: 100%;
+	height: 20px;
+	line-height: 20px;
+	font-size: 20px;
+	color: #D2C4A7;
+	z-index: 99;
+ }
+.yue:after{ 
+	content: ".";
+	display: block;
+	position: absolute;
+	left: -3px;
+	top: -3px;
+	width: 100%;
+	height: 100%;
+	border-radius: 50px;
+	background-color: #071B26;
+	font-size: 0;
+	animation: waning 6s linear infinite;
+ }
+.show.yue{ 
+	position: absolute;
+	width: 500px;
+	height: 500px;
+	border-radius: 250px;
+	left: 50%;
+	top: 50%;
+	margin: -250px 0 0 -250px;
+	background-color: #D2C4A7;
+	animation: swing 6s linear infinite;
+	transform-origin: 75% top;
+	cursor: pointer;
+ }
+.show.yue:before{ 
+	content: "Yue";
+	display: inline-block;
+	position: absolute;
+	left: 30%;
+	top: 50%;
+	margin: -25px 0 0 0;
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	font-size: 50px;
+	color: #D2C4A7;
+	z-index: 99;
+ }
+.show.yue:after{ 
+	content: ".";
+	display: block;
+	position: absolute;
+	left: -3px;
+	top: -3px;
+	width: 100%;
+	height: 100%;
+	border-radius: 250px;
+	background-color: #071B26;
+	font-size: 0;
+	animation: waning 6s linear infinite;
+ }
+@keyframes swing{ 
+	0%{ 
+		transform: rotate(-4deg);
+		opacity: .8;
+	 }
+	25%{ 
+		transform: rotate(0deg);
+		opacity: .9;
+	 }
+	50%{ 
+		transform: rotate(4deg);
+		opacity: 1;
+	 }
+	75%{ 
+		transform: rotate(0deg);
+		opacity: .9;
+	 }
+	100%{ 
+		transform: rotate(-4deg);
+		opacity: .8;
+	 }
+ }
+@keyframes waning{ 
+	0%{ 
+		left: -3px;
+		top: -3px;
+	 }
+	25%{ 
+		left: -6px;
+		top: -6px;
+	 }
+	50%{ 
+		left: -9px;
+		top: -9px;
+	 }
+	75%{ 
+		left: -6px;
+		top: -6px;
+	 }
+	100%{ 
+		left: -3px;
+		top: -3px;
+	 }
+ }
+
+.wrapper .meteor{
+	position: absolute;
+	border-radius: 4px;
+	background-color: #D2C4A7;
+	transform-origin: center top;
+	transform: rotate(44deg);
+	animation: shining 6s linear infinite;
+ }
+.wrapper .meteor.one{ 
+	width: 3px;
+	height: 140px;
+	left: 240px;
+	top: 0px;
+ }
+.wrapper .meteor.two{ 
+	width: 2px;
+	height: 440px;
+	left: 340px;
+	top: 0px;
+ }
+.wrapper .meteor.three{
+	transform-origin: center bottom;
+	transform: rotate(46deg);
+	width: 3px;
+	height: 200px;
+	right: 200px;
+	bottom: 1px;
+ }
+@keyframes shining{ 
+	0%{ 
+		opacity: .8;
+	 }
+	25%{ 
+		opacity: .9;
+	 }
+	50%{ 
+		opacity: 1;
+		width: 4px;
+	 }
+	75%{ 
+		opacity: .9;
+	 }
+	100%{ 
+		opacity: .8;
+	 }
+ }
+
+.wrapper .box-wrapper{ 
+	position: absolute;
+	width: 600px;
+	height: 500px;
+	left: 50%;
+	top: 50%;
+	margin: -250px 0 0 -300px;
+	
+	opacity: 0;
+	transition: all .3s ease-in-out;
+ }
+.wrapper .box-wrapper.show{ 
+	
+	opacity: 1;
+ }
+.box{
+	position: relative;
+	width: 100%;
+	height: 100%;
+ }
+.box .title{ 
+	width: 100%;
+	text-align: center;
+	font-size: 40px;
+	line-height: 60px;
+	color: #D2C4A7;
+ }
+.box .item-list{ 
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	list-style-type: none;
+ }
+.item-list .item{ 
+	display: inline-block;
+	padding: 10px 20px;
+ }
+.item-list a{ 
+	text-decoration: none;
+	font-size: 20px;
+	color: #D2C4A7;
+ }
+.item-list a:hover{ 
+	text-decoration: underline;
+ }
+.item-list a:hover+.hints{ 
+	opacity: 1;
+ }
+.item-list .hints{ 
+	display: block;
+	font-size: 14px;
+	line-height: 40px;
+	color: #D2C4A7;
+	opacity: 0;
+	transition: opacity .3s ease-in-out;
+ }
+ }
+@media screen and (max-width: 992px){
+.wrapper{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: #071B26;
+ }
+.yue-inner{ 
+	position: fixed;
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	left: 10%;
+	top: 6px;
+	background-color: #D2C4A7;
+	z-index: 999;
+ }
+.yue-inner:before{ 
+	content: "Yue";
+	display: inline-block;
+	position: absolute;
+	left: 110%;
+	top: 20px;
+	width: 100%;
+	height: 50px;
+	line-height: 24px;
+	font-size: 24px;
+	color: #D2C4A7;
+	z-index: 99;
+ }
+.yue-inner:after{ 
+	content: ".";
+	display: block;
+	position: absolute;
+	left: -5px;
+	top: -5px;
+	width: 100%;
+	height: 100%;
+	border-radius: 25px;
+	background-color: #071B26;
+	font-size: 0;
+ }
+.yue{ 
+	position: fixed;
+	width: 100%;
+	height: 60px;
+	left: 0px;
+	top: 0;
+	background-color: #071B26;
+	z-index: 9;
+ }
+.wrapper .box-wrapper{ 
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 60px;
+	overflow: hidden;
+ }
+.box{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+ }
+.box .title{ 
+	width: 100%;
+	text-align: center;
+	font-size: 20px;
+	line-height: 60px;
+	color: #D2C4A7;
+ }
+.box .item-list{
+	width: 100%;
+	text-align: left;
+	list-style-type: none;
+ }
+.item-list .item{
+	width: 80%;
+	margin: 10px 10% 0 10%;
+	border-bottom: 1px solid #D2C4A7;
+ }
+.item-list a{ 
+	text-decoration: none;
+	font-size: 20px;
+	color: #D2C4A7;
+ }
+.item-list a:hover{ 
+	text-decoration: underline;
+ }
+.item-list .hints{ 
+	display: block;
+	font-size: 14px;
+	line-height: 30px;
+	color: #D2C4A7;
+	padding-left: 40px;
+ }
+ }

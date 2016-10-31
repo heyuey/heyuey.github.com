@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  padding: 40px 0 0 0;
+  font-family: sans-serif;
+  color: #333;
+  line-height: 140%;
+  background-color: #F5F3F5;
+}
+.demo {
+  display: inline-block;
+  width: 24%;
+  padding: 10px;
+  -webkit-box-sizing: padding-box;
+  box-sizing: padding-box;
+}
+.demo textarea {
+  -webkit-box-sizing: padding-box;
+  box-sizing: padding-box;
+  font-family: "Roboto";
+  font-size: 0.9em;
+  height: 32px;
+  padding: 6px 0px;
+  resize: none;
+  text-align: center;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+img {
+  border: none;
+}
+p {
+  font-family: 'Roboto', sans-serif;
+  margin: 0 0 15px;
+}
+a {
+  color: #2098D1;
+  text-decoration: none;
+}
+.effects {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media only screen and (max-width: 959px) {
+  .demo {
+    width: 32.5%;
+  }
+}
+@media only screen and (max-width: 659px) {
+  .demo {
+    width: 49%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .demo {
+    width: 100%;
+  }
+}
