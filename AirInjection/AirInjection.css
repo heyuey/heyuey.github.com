@@ -30,6 +30,8 @@ i {
   animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
+  animation-fill-mode: none;
+  animation-direction: normal;
 }
 
 i:nth-child(1) {
@@ -534,9 +536,10 @@ i:nth-child(62) {
   }
   100% {
     opacity: 0.6;
-    -moz-transform: translate3d(-4px, -4px, 570px);
-    -ms-transform: translate3d(-4px, -4px, 570px);
-    -webkit-transform: translate3d(-4px, -4px, 570px);
-    transform: translate3d(-4px, -4px, 570px);
+    transform: translate3d(-4px, -4px, 510px);
+    -ms-transform: translate3d(-4px, -4px, 510px);
+    -webkit-transform: translate3d(-4px, -4px, 510px);
+    -moz-transform: translate3d(-4px, -4px, 499px);
   }
+
 }
